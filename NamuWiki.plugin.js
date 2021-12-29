@@ -167,15 +167,15 @@ module.exports = !global.ZeresPluginLibrary ? class {
 			let definitionElement = [];
 			for (let i = 0; i < res.items.length && i < this.settings.showAmount; i++) {
 				let definitionBlob = res.items[i];
-
+                                let title = definitionBlob.title.replace(/[\[\]]/g, "");
 				let definition = definitionBlob.snippet.replace(/[\[\]]/g, "");
 				if (this.settings.filter !== 0) {
 					definition = await this.filterText(definition);
-					example = await this.filterText(example);
+					title = await this.filterText(title);
 				}
 
 				definitionElement.push(React.createElement("div", { class: "UrbanD-Definition" },
-					React.createElement("div", { class: "UrbanD-Title" }, "Definition:"),
+					React.createElement("div", { class: "UrbanD-Title" }, title),
 					React.createElement("div", { class: "UrbanD-Text" }, definition),
 				))
 			}
