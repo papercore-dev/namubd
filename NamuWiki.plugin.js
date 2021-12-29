@@ -25,9 +25,9 @@ module.exports = !global.ZeresPluginLibrary ? class {
 	getDescription() { return config.info.description; }
 	getVersion() { return config.info.version; }
 	load() {
-		BdApi.showConfirmationModal("Library Missing", `The library plugin needed for **${config.info.name}** is missing. Please click Download Now to install it.`, {
-			confirmText: "Download Now",
-			cancelText: "Cancel",
+		BdApi.showConfirmationModal("라이브러리가 없습니다", `**${config.info.name}**을 실행하기 위한 라이브러리가 없습니다. 클릭하여 설치하세요.`, {
+			confirmText: "지금 다운로드",
+			cancelText: "취소",
 			onConfirm: () => {
 				require("request").get("https://rauenzi.github.io/BDPluginLibrary/release/0PluginLibrary.plugin.js", async (error, response, body) => {
 					if (error) return require("electron").shell.openExternal("https://betterdiscord.app/Download?id=9");
