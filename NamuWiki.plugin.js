@@ -1,9 +1,9 @@
 /**
  * @name NamuWiki
  * @author Papercore
- * @updateUrl https://raw.githubusercontent.com/papercore-dev/namubd/main/NamuWiki.plugin.js
+ * @updateUrl https://raw.githubusercontent.com/papercore-dev/namubd/blob/main/NamuWiki.plugin.js
  * @authorLink https://github.com/papercore-dev
- * @source https://github.com/papercore-dev/namubd/main/NamuWiki.plugin.js
+ * @source https://github.com/papercore-dev/namubd/blob/main/NamuWiki.plugin.js
  */
 const config = {
 	"info": {
@@ -15,7 +15,7 @@ const config = {
 		}],
 		"version": "1.0.1",
 		"description": "Shows word's description from Namu Wiki.",
-		"github_raw": "https://raw.githubusercontent.com/papercore-dev/namubd/main/NamuWiki.plugin.js"
+		"github_raw": "https://raw.githubusercontent.com/papercore-dev/namubd/blob/main/NamuWiki.plugin.js"
 	},
 }
 module.exports = !global.ZeresPluginLibrary ? class {
