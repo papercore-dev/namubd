@@ -202,8 +202,8 @@ module.exports = !global.ZeresPluginLibrary ? class {
 			text = text.toLowerCase()
 			let wordArray = text.match(/\w+/gi);
 			let hasProfanity = false;
-			wordArray.forEach(word => {
-				if(profanityArray.includes(word)) {
+			wordArray.forEach(text => {
+				if(profanityArray.includes(text)) {
 					hasProfanity = true;
 				}
 			})
