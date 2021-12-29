@@ -251,11 +251,11 @@ module.exports = !global.ZeresPluginLibrary ? class {
 		}
 		getSettingsPanel() {
 			return SettingPanel.build(() => this.saveSettings(this.settings),
-				new RadioGroup('Filter', `욕설 필터를 켜려면 클릭하세요. 검색 결과가 나타나기까지 시간이 걸릴 수 있습니다. 완벽한 필터는 없고, 미성년자에게 적절하지 못한 주제가 나타날 수 있습니다.`, this.settings.filter || 0, profanityOptions, (i) => {
+				new RadioGroup('필터링', `욕설 필터를 켜려면 클릭하세요. 검색 결과가 나타나기까지 시간이 걸릴 수 있습니다. 완벽한 필터는 없고, 미성년자에게 적절하지 못한 주제가 나타날 수 있습니다.`, this.settings.filter || 0, profanityOptions, (i) => {
 					this.settings.filter = i;
 					profanityArray = this.updateProfanityArray(i);
 				}),
-				new Slider("Amount of definitions", "Defines how many definitions of the word you want to get displayed. More definitions will take longer to load (especially with the Profanity Filter turned on).", 1, 10, this.settings.showAmount, (i) => {
+				new Slider("결과 수", "몇개의 결과를 나타낼지 선택하세요.", 1, 10, this.settings.showAmount, (i) => {
 					this.settings.showAmount = i;
 				}, { markers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], stickToMarkers: true }),
 			)
